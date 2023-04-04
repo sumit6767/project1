@@ -2,7 +2,9 @@ import './App.css';
 import InputForm from './Components/Input/InputForm';
 import React,{useState} from 'react';
 import Record from './Components/Display/Record'
+import './Components/Error Component/Error.css'
 import ErrorFirst from './Components/Error Component/ErrorFirst';
+import ErrorSecond from './Components/Error Component/ErrorSecond';
 
 function App(props) {
   
@@ -25,17 +27,18 @@ function App(props) {
     }
   }
   function errorFirstHandler(close){
+
     setErrorFirst(close)
   }
   function errorSecondHandler(close){
     setErrorSecond(close)
   }
   return (
-    <div className='root'>
-      <InputForm onFormSubmit = {submitHandler}/>
+    <div className={errorfirst || errorsecond ? `class backdrop`:"class"}>
+      <InputForm onFormSubmit = {submitHandler} errorfirst={errorfirst} errorsecond={errorsecond}/>
       <Record inputRecord = {input}/>
       {
-        errorfirst ? <ErrorFirst onErrorFirst={errorFirstHandler}/>: errorsecond ? <ErrorFirst onErrorSecond = {errorSecondHandler}/>:""
+        errorfirst ? <ErrorFirst onErrorFirst={errorFirstHandler}/>: errorsecond ? <ErrorSecond onErrorSecond = {errorSecondHandler}/>:""
       }
     </div>
   );

@@ -1,6 +1,7 @@
 import React,{useState} from "react";
 import './InputForm.css'
 import Button from "../UI/Button";
+
 export default function InputForm(props){
 
     const [userName, setUserName] = useState("");
@@ -18,7 +19,7 @@ export default function InputForm(props){
         setAge(e.target.value+"")
     }
     return(
-        <div className="form">
+        <div className={props.errorfirst||props.errorsecond? "form back" :"form" }>
             <form onSubmit={submitInputHandler}>
             <label htmlFor="username">UserName</label>
             <input type="text" id="username" value={userName} onChange={userNameHandler} />

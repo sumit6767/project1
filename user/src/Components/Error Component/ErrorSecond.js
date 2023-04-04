@@ -2,7 +2,7 @@ import React from "react";
 import './Error.css'
 import '../UI/Button.css'
 
-function ErrorFirst(props){
+function ErrorSecond(props){
     const close = true;
     function erroHandler(e){
         props.onErrorSecond(!close)
