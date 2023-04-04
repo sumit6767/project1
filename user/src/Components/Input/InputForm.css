@@ -1,0 +1,26 @@
+.form{
+    text-align: center;
+    margin:2% 0%;
+    width:50%;
+    margin-left:25%;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+.form label{
+    width: 100%;
+    margin: 5px 0;
+    display: block;
+    text-align: left;
+    font-weight:900;
+}
+.form input{
+    width:98%;
+    padding: 10px;
+    text-align: left;
+    display: block;
+    outline: none;
+    font-size: medium;
+    border:1px solid black;
+    border-radius: 10px;
+}

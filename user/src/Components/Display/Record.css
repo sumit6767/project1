@@ -1,0 +1,18 @@
+.records{
+    text-align: center;
+    margin:2% 0%;
+    width:50%;
+    margin-left:25%;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+.item{
+    text-align: left;
+    border:1px solid black;
+    margin:10px 0;
+    border-radius: 10px;
+}
+.item p{
+    margin-left: 1.6%;
+}
