@@ -13,7 +13,7 @@ function ErrorSecond(props){
         <div className="errorfirst">
             <h2>Invalid Input</h2>
             <div>
-                <p style={{lineHeight:"6.5rem",fontSize:'1.2rem'}}>Please enter a valid age (0)</p>
+                <p style={{lineHeight:"6.5rem",fontSize:'1.2rem',margin:"0"}}>Please enter a valid age (0)</p>
                 <button className="button" onClick={erroHandler}>Cancel</button>
             </div>
         </div>

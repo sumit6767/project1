@@ -2,34 +2,38 @@
     background-color: white;
     text-align: center;
     width:75%;;
-    border-radius: 20px;
     transition: all 20s ease-in;
-    position: absolute;
+    position: fixed;
     top:50%;
     left:50%;
     transform: translate(-50%,-50%);
-    z-index: 100;
+    border-radius: 20px;
 }
-.backdrop{
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top:0;
-    left:0;
-    background-color: rgba(66, 24, 24, 0.281);
+.errorfirst::after{
+    content: "sumit ";
+    position: absolute;
+    width: 500%;
+    height: 500%;
+    top:-150%;
+    left:-50%;
+    background-color: rgba(13, 13, 13, 0.538);
+    z-index:-1;
 }
 .errorfirst h2{
     background-color:darkblue;
     color:white;
     padding: 15px;
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
     margin:0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 .errorfirst div{
     text-align: center;
     width: 100%;
     height: 10rem;
+    background-color: white;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 .errorfirst button{
     position: relative;

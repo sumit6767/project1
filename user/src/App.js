@@ -27,14 +27,13 @@ function App(props) {
     }
   }
   function errorFirstHandler(close){
-
     setErrorFirst(close)
   }
   function errorSecondHandler(close){
     setErrorSecond(close)
   }
   return (
-    <div className={errorfirst || errorsecond ? `class backdrop`:"class"}>
+    <div className={"class"}>
       <InputForm onFormSubmit = {submitHandler} errorfirst={errorfirst} errorsecond={errorsecond}/>
       <Record inputRecord = {input}/>
       {

@@ -19,7 +19,7 @@ export default function InputForm(props){
         setAge(e.target.value+"")
     }
     return(
-        <div className={props.errorfirst||props.errorsecond? "form back" :"form" }>
+        <div className="form">
             <form onSubmit={submitInputHandler}>
             <label htmlFor="username">UserName</label>
             <input type="text" id="username" value={userName} onChange={userNameHandler} />
