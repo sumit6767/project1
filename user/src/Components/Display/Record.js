@@ -7,7 +7,7 @@ const Record = (props)=>{
         <div className="records">
             {
                 props.inputRecord.map(record=>{
-                    return <Item key={record.id} userName={record.userName} age={record.age}/>
+                    return <Item key={record.id} collegeName={record.collegeName} userName={record.userName} age={record.age}/>
                 })
             }
         </div>

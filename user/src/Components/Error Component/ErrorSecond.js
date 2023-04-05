@@ -1,15 +1,14 @@
 import React from "react";
 import './Error.css'
 import '../UI/Button.css'
+import  ReactDOM from "react-dom";
 
 function ErrorSecond(props){
     const close = true;
     function erroHandler(e){
         props.onErrorSecond(!close)
     }
-    return(
-        <>
-        {
+    const backdrop = 
         <div className="errorfirst">
             <h2>Invalid Input</h2>
             <div>
@@ -17,8 +16,8 @@ function ErrorSecond(props){
                 <button className="button" onClick={erroHandler}>Cancel</button>
             </div>
         </div>
-        }
-        </>
+    return(
+        ReactDOM.createPortal(backdrop,document.getElementById("error-modal"))
     )
 }
 

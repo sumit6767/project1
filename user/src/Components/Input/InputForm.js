@@ -1,30 +1,30 @@
-import React,{useState} from "react";
+import React,{useRef} from "react";
 import './InputForm.css'
 import Button from "../UI/Button";
 
 export default function InputForm(props){
 
-    const [userName, setUserName] = useState("");
-    const [age,setAge] = useState("");
+    const inputNameRef = useRef();
+    const ageRef = useRef();
+    const collegeNameRef = useRef()
+    
     function submitInputHandler(e){
         e.preventDefault();
-        props.onFormSubmit({"userName":userName,"age":age,id:Math.random().toString()})
-        setUserName("")
-        setAge("")
-    }
-    function userNameHandler(e){
-        setUserName(e.target.value)
-    }
-    function ageHandler(e){
-        setAge(e.target.value+"")
+        const userName = inputNameRef.current.value;
+        const age = ageRef.current.value
+        const collegeName = collegeNameRef.current.value
+        props.onFormSubmit({"userName":userName,"age":age,"collegeName":collegeName,id:Math.random().toString()})
+       
     }
     return(
         <div className="form">
             <form onSubmit={submitInputHandler}>
             <label htmlFor="username">UserName</label>
-            <input type="text" id="username" value={userName} onChange={userNameHandler} />
+            <input ref={inputNameRef} type="text" id="username"/>
             <label htmlFor="age">Age (Years)</label>
-            <input type="number" id="age" value={age} onChange={ageHandler} />
+            <input ref={ageRef} type="number" id="age"  />
+            <label htmlFor="college">College</label>
+            <input ref={collegeNameRef} type="text" id="college"  />
             <Button type="submit">Add User</Button>
             </form>
         </div>

@@ -11,7 +11,7 @@ function App(props) {
   const [input,setInput] = useState([]);
   const [errorfirst,setErrorFirst] = useState(false);
   const [errorsecond,setErrorSecond] = useState(false);
-
+  console.log("repeated")
   function submitHandler(enteredInput){
     if(enteredInput.userName.trim().length === 0 || enteredInput.age.trim().length ===0){
       setErrorFirst(!errorfirst);

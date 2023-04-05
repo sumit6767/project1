@@ -4,7 +4,7 @@ import './Record.css'
 export default function Item(props){
     return(
         <div className="item">
-            <p>{`${props.userName} (${props.age})`}</p>
+            <p>{`${props.userName} (${props.age}) ${props.collegeName}`}</p>
         </div>
     )
 }
