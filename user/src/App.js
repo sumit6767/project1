@@ -21,8 +21,7 @@ function App(props) {
     }
     else{
       setInput(preState=>{
-      preState.unshift(enteredInput);
-      return [...preState]
+      return [enteredInput,...preState]
     })
     }
   }

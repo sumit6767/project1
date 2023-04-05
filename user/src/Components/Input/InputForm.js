@@ -13,6 +13,7 @@ export default function InputForm(props){
         const userName = inputNameRef.current.value;
         const age = ageRef.current.value
         const collegeName = collegeNameRef.current.value
+        console.log(userName,age,collegeName)
         props.onFormSubmit({"userName":userName,"age":age,"collegeName":collegeName,id:Math.random().toString()})
        
     }
